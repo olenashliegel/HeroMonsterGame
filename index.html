@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/scripts.js"></script>
+  <title>Hero vs Monster Game</title>
+</head>
+
+<body>
+  <div>
+    <h1>Welcome to Hero vs Monster Game</h1>
+  </div>
+  <div class="container">
+    <div>
+      <h2>Characteristic of your hero</h2>
+      <form id="heroForm">
+        <div>
+          <label for="nameOfHero">Enter name of your hero:</label><br>
+          <input id="nameOfHero" name="nameOfHero" type="text">
+        </div>
+        <div>
+          <p>Select a race of your hero:</p>
+          <input id="humansRace" name="heroRace" type="radio" value="humans" checked>
+          <label for="humansRace">Humans (Attack +1)</label> <br>
+          <input id="elvesRace" name="heroRace" type="radio" value="elves">
+          <label for="elvesRace">Elves (Attack +2, Defense -1)</label> <br>
+          <input id="dwarvesRace" name="heroRace" type="radio" value="dwarves">
+          <label for="dwarvesRace">Dwarves (Defense +1)</label> <br>
+          <input id="halflingsRace" name="heroRace" type="radio" value="halflings">
+          <label for="halflingsRace">Halflings (Attack -1)</label>
+        </div>
+        <div>
+          <label class="select" for="weapon">Select your weapons:</label> <br>
+          <select id="weapon">
+            <option value="noWeapon">I am brave hero I don't need weapon</option>
+            <option value="broadSword">Broad Sword (+2 in Attack, -3 in Defense)</option>
+            <option value="dancingSword">Singing & Dancing Sword (+1 in Attack)</option>
+            <option value="bastardSword">Sneaky Bastard Sword (+3 in Attack, -4 in Defense)</option>
+            <option value="rapier">Rapier of Unfairness (+2 in Attack, -1 in Defense)</option>
+          </select>
+        </div>
+        <div>
+          <label class="select" for="armor">Select your armor:</label> <br>
+          <select id="armor">
+            <option value="noArmor">I am brave hero I don't need armor</option>
+            <option value="sandals">Sandals of Protection (+2 in Defense, -1 in Attack)</option>
+            <option value="armor">Leather Armor (+1 in Defense)</option>
+            <option value="hat">Pointy Hat of Power (+3 in Defense, -5 in Attack)</option>
+            <option value="boots">Boots of Butt-Kicking (+4 in Defense, -2 in Attack)</option>
+          </select>
+        </div>
+        <div>
+          <p>Click button to generate level of your hero!</p>
+          <button id="generateHeroLevelButton" type="button">Generate</button>
+          <p>Your hero level is (0-9): <span id="heroLevel">_________</span></p>
+        </div>
+        <button class="hidden" id="submitHeroForm" type="submit">SubmitMyHero</button>
+        <button class="hidden" id="clearHeroForm" type="button">Clear my hero</button>
+      </form>
+    </div>
+    <div id="battle" class="hidden">
+      <div>
+        <h2>Battle</h2>
+        <button id="generateMonsterButton" type="button">Generate a monster</button>
+        <button id="battleButton" type="button" class="hidden">Let's fight</button>
+        <div class="container">
+          <div>
+            <p>Hero name is: <span id="heroNameInBattle">_________</span></p>
+            <p>Hero level is: <span id="heroLevelInBattle">_________</span></p>
+            <p>Hero attack: <span id="heroAttackInBattle">_________</span></p>
+            <p>Hero defense:<span id="heroDefenseInBattle">_________</span></p>
+          </div>
+          <div>
+            <p>Monster name is: <span id="monsterNameInBattle">_________</span></p>
+            <p>Monster level is: <span id="monsterLevelInBattle">_________</span></p>
+            <p>Monster attack: <span id="monsterAttackInBattle">_________</span></p>
+            <p>Monster defense:<span id="monsterDefenseInBattle">_________</span></p>
+          </div>
+        </div>
+        <p id="resultText" class="hidden">Battle result: <span id="battleResult">____</span> wins!</p>
+        <button id="resetGame" type="button" class="hidden">Start from the beginning</button>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
